@@ -1,0 +1,7 @@
+RewriteBase /
+RewriteEngine On
+RewriteCond % {REQUESR_FILENAME} !-d
+RewriteCond % {REQUESR_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+ErrorDocument 404 /404.html
